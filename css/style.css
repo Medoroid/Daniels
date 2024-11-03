@@ -1,0 +1,976 @@
+/* global ruls */
+body{
+    font-family:  "Poppins", sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Montserrat", sans-serif;
+}
+:root{
+    --main-color:#1C1C1C;
+    --section-color:#f7f7f7;
+    --gray:#5b5b5b;
+    --input-bg:#f4f4f4;
+    --sub-color:#999;
+    --pragraf-color:#748182;
+    --heading-color:#343434;
+    --transition: all 0.5s;
+}
+
+    .container{
+    max-width: 1170px;}
+
+/* global ruls */
+/* hero */
+.hero{
+    background-size: cover;
+    background-position: 0px 0px;
+}
+@media screen and (min-width:991px){
+.hero .container-fluid{
+    width: 1170px;
+}
+}
+@media screen and (max-width:991px){
+.hero .container-fluid{
+    width: 100%;
+}
+}
+
+/* hero */
+/* header */
+header .navbar{
+    padding: 20px 0 30px;
+    min-height: 50px;
+    margin-bottom: 20px;
+}
+header .navbar-brand{
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0;
+}
+header .nav-item{
+    margin: 25px 20px 0;
+    background: none;
+    cursor: pointer;
+    height: fit-content;
+}
+header .nav-link{
+    font-size: 14px;
+}
+header .nav-link::before{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition:var(--transition);
+
+}
+header .nav-link.active{
+    --bs-nav-pills-link-active-color: #fff;
+    --bs-nav-pills-link-active-bg: none;
+}
+header .nav-link.active::before,
+header .nav-item:hover .nav-link::before{
+    width: 100%;
+}
+@media screen and (max-width:1200px) {
+    header .navbar-brand{
+        padding-left: 24px;
+    }
+    }
+@media screen and (max-width:992px) {
+    header .navbar-brand{
+        padding-left: 24px;
+    }
+    header .nav-item{
+        margin: 25px 15px 0;
+    }
+    header .nav-link{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:768px) {
+header .navbar-collapse{
+background-color: #ffffff;
+margin-top: 10px;
+}
+header .nav-item{
+    width: 100%;
+    text-align: center;
+}
+header .navbar-nav {
+    margin: 7.5px -15px;
+}
+header .nav-link{
+    color:black !important;
+}
+header button .tog-button span{
+    display: block;
+    width: 22px;
+    background: #fff;
+    height: 2px;
+    margin-bottom: 4px;
+    border-radius: 1px;
+    border: none;
+}
+.navbar-toggler{
+    border: none;
+    outline: none;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+}
+/* header */
+/* landing */
+.landing {
+    padding-top: 70px;
+}
+.landing h2{
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.landing h1{
+    font-size: 60px;
+    font-weight: 200;
+}
+.landing h1 span{
+    border-right: 3px solid #ffffffa2;
+    padding-right: 10px;
+    
+}
+.landing h1 span::after{
+    content: "Developer";
+    transition:var(--transition);
+    font-weight: 400;
+    animation: typing 10s infinite;
+    width: 0;
+}
+.landing .icons{
+    gap: 5px;
+    margin-top: 30px;
+}
+.landing .icons .icon-circle{
+    width: 35px;
+    height: 35px;
+    background: rgba(0, 0, 0, 0.3);
+}
+.landing .icons .icon-circle i{
+    font-size: 14px;
+}
+@media screen and (max-width:1200px) {
+    .landing h1{
+        font-size: 44px;
+    }
+}
+@media screen and (max-width:786px) {
+    .landing h1{
+        font-size: 30px;
+    }
+}
+/* landing */
+/* about */
+.about{
+    padding: 100px 0;
+}
+.about .content::after{
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 0px;
+    bottom: -30px;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+.about .text-content .heading h3{
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    color: var(--heading-color);
+}
+.about .text-content .heading h3::after{
+    display: none;
+}
+.about .text-content .heading span{
+    font-size: 14px;
+    font-weight: 400;
+    color:var(--sub-color);
+        text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.about .text-content p{
+    font-size: 15px;
+    color: var(--pragraf-color);
+}
+.about .text-content .progress-content{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.about .text-content .progress-content .progress{
+    margin-bottom: 30px;
+    height:24.3px;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+}
+.about .text-content .progress-content .progress-bar{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: var(--main-color);
+}
+.about .text-content .progress-content span{
+    font-size: 13px;
+    font-weight: 500;
+}
+.about .text-content .buttons{
+    margin-top: 50px;
+}
+.about .text-content .buttons a{
+    padding: 10px 30px;
+    border: 1px solid #1c1c1c;
+    border-radius: 5px;
+    font-size: 13px;
+    transition:var(--transition);
+}
+.about .text-content .buttons a:first-child{
+    background-color: var(--main-color);
+    color: white;
+}
+.about .text-content .buttons a:first-child:hover{
+    background-color:white;
+    color:var(--main-color);
+}
+.about .text-content .buttons a:last-child{
+    color: var(--main-color);
+}
+.about .text-content .buttons a:last-child:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+@media screen and (max-width:992px) {
+    .about .content{
+        justify-content: center !important;
+    }
+    .about .text-content{
+        margin-top: 30px;
+    }
+}
+/* about */
+/* Services */
+.services{
+    padding: 100px 0;
+}
+.heading{
+    margin-bottom: 80px;
+}
+.heading h3{
+    width: fit-content;
+    font-size: 40px;
+    font-weight: 900;
+    position: relative;
+}
+.heading h3::after{
+    content: "";
+    position: absolute;
+    background-image: url(../imgs/dots.png);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 7px;
+    z-index: -1;
+}
+.services .box{
+    padding: 50px 20px;
+    background: #fff;
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+.services .box:hover .icons-circle{
+background-color: var(--main-color);
+color: white;
+}
+.services .box .icon{
+    margin-bottom: 20px;
+}
+.services .box .icons-circle{
+    width: 70px;
+    height: 70px;
+    background-color: var(--input-bg);
+    border-radius: 50%;
+    transition:var(--transition);
+}
+.services .box .icons-circle i{
+    font-size: 30px;
+}
+.services .box h4{
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-size: 18px;
+}
+.services .box p{
+    word-spacing: 2px;
+    font-size: 14px;
+    color: var(--pragraf-color);
+}
+/* Services */
+/* Works */
+.works{
+    padding: 100px 0;
+}
+
+.works .nav-link{
+    color: var(--main-color);
+}
+.works .nav-link.active{
+
+    background:none;
+    color: var(--main-color);
+}
+.works .nav-link::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background:var(--main-color);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition:var(--transition);
+}
+.works .nav-link.active::after{
+    width: 100%;
+}
+.works .box{
+    max-width: 360px;
+    max-height: 300px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.works .box:hover .layer{
+    opacity: 1;
+}
+.works .box:hover .layer h5 ,
+.works .box:hover .layer .icons{
+    transform: translateY(0px);
+}
+.works .box .layer{
+    background: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    transition:var(--transition);
+    z-index: 2;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+}
+.works .box .layer h5{
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    margin-bottom: 15px;
+    transition:var(--transition);
+    transform: translateY(-20px);
+}
+.works .box .layer .icons{
+    transform: translateY(20px);
+    transition:var(--transition);
+}
+.works .box .layer .icons a{
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    transition:var(--transition);
+}
+.works .box .layer .icons a:hover{
+    color: var(--main-color);
+    background-color: white;
+}
+.works .box .layer .icons a i{
+    font-size: 14px;
+}
+@media screen and (max-width:768px) {
+    .works .box{
+        max-width:100%;
+        max-height: 100%;
+}
+.works .box img{
+    width: 100%;
+}
+}
+/* Works */
+/* clients */
+.clients{
+    padding: 100px 0;
+}
+
+.clients .comment-box img{
+    width: 90px;
+    height: 90px;
+}
+.clients .comment-box p{
+    font-size: 15px;
+    color: var(--pragraf-color);
+    word-spacing: 2px;
+    padding: 0 40px;
+}
+.clients .comment-box .who h5{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 30px 0 5px;
+}
+.clients .comment-box .who span{
+    font-size: 12px;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.clients .carousel-indicators button{
+    width: 10px;
+    height: 10px;
+    background: #869791;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 50%;
+ }
+ .clients .carousel-indicators button:hover{
+    opacity: 1;
+ }
+/* clients */
+/* Number */
+.number{
+    padding: 100px 0;
+}
+.number .box i{
+    font-size: 30px;}
+.number .box h3{
+    font-size: 30px;
+    font-weight: 900;
+}
+.number .box span{
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+/* Number */
+/* team */
+.team{
+    padding: 100px 0;
+}
+.team .box {
+    margin-bottom: 10px;
+overflow: hidden;
+}
+.team .box img{
+    width: 100%;
+    transition: var(--transition);
+}
+.team .box .layer{
+    background: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    transition:var(--transition);
+    z-index: 2;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    transform: scale(0.5) rotateY(180deg);
+}
+.team .box:hover .layer{
+    transform: scale(1) rotateY(0deg);
+    opacity: 1;
+}
+.team .box:hover img{
+    transform: scale(1.3);
+}
+.team .box .layer .icons{
+    gap: 10px;
+}
+.team .box .layer .icons a{
+    color: #fff;
+    background: var(--main-color);
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border: 1px solid var(--main-color);
+    transition: var(--transition);
+}
+.team .box .layer .icons a:hover{
+    color: var(--main-color) !important;
+    background-color: white;
+}
+.team .box .text{
+    background-color: var(--gray);
+    padding: 25px;
+    position: relative;
+}
+.team .box .text h4{
+    color: white;
+    font-size: 24px;
+}
+.team .box .text h5{
+    color: white;
+    font-size: 20px;
+}
+@media (min-width: 768px) {
+    .team .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .team .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .team .container {
+        width: 1170px;
+    }
+}
+/* team */
+/* contact */
+.contact{
+    padding: 100px 0;
+}
+.contact .icon-circle{
+    font-size: 25px;
+    margin-bottom: 15px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: #f4f4f4;
+    transition:var(--transition);
+}
+.contact .icon-circle:hover{
+background-color: var(--main-color);
+color: white;
+}
+.contact h5{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.contact p{
+    font-size: 15px;
+    color: var(--pragraf-color);
+}
+.contact .info-box {
+    margin-bottom: 30px;
+}
+.contact input,
+.contact textarea{
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    background: #f4f4f4;
+    margin-bottom: 15px;
+}
+.contact textarea{
+max-height: 160px;
+height: 150px;
+}
+.contact button{
+    padding: 10px 40px;
+    border: 1px solid #1c1c1c;
+    border-radius: 5px;
+    font-size: 13px;
+    transition:var(--transition);
+    background-color: var(--main-color);
+    color: white;
+}
+.contact button:hover{
+    background-color:white;
+    color:  var(--main-color);
+}
+/* contact */
+/* footer */
+footer{
+    padding: 30px;
+}
+footer p{
+    font-size: 13px;
+    color: var(--pragraf-color);
+    margin: 0;
+}
+/* footer */
+/* animation */
+@keyframes typing {
+    0%{
+        width: 0;
+        content: "";
+    }
+    /* Designer */
+    2%{
+        width: fit-content;
+        content: "D";
+    }
+    3%{
+        width: fit-content;
+        content: "De";
+    }
+    4%{
+        width: fit-content;
+        content: "Des";
+    }
+    5%{
+        width: fit-content;
+        content: "Desi";
+    }
+    6%{
+        width: fit-content;
+        content: "Desig";
+    }
+    7%{
+        width: fit-content;
+        content: "Design";
+    }
+    8%{
+        width: fit-content;
+        content: "Design";
+    }
+    9%{
+        width: fit-content;
+        content: "Designe";
+    }
+    10%{
+        width: fit-content;
+        content: "Designer";
+    }
+    11%{
+        width: fit-content;
+        content: "Designer";
+    }
+    12%{
+        width: fit-content;
+        content: "Designer";
+    }
+    13%{
+        width: fit-content;
+        content: "Designer";
+    }
+    14%{
+        width: fit-content;
+        content: "Designer";
+    }
+    15%{
+        width: fit-content;
+        content: "Designer";
+    }
+    16%{
+        width: fit-content;
+        content: "Designer";
+    }
+    17%{
+        width: fit-content;
+        content: "Designer";
+    }
+    18%{
+        width: fit-content;
+        content: "Designer";
+    }
+    19%{
+        width: fit-content;
+        content: "Designer";
+    }
+    20%{
+        width: fit-content;
+        content: "Designer";
+    }
+    21%{
+        width: fit-content;
+        content: "Designer";
+    }
+    22%{
+        width: fit-content;
+        content: "Designer";
+    }
+    23%{
+        width: fit-content;
+        content: "Designer";
+    }
+    24%{
+        width: fit-content;
+        content: "Designer";
+    }
+    25%{
+        width: fit-content;
+        content: "Designer";
+    }
+    26%{
+        width: fit-content;
+        content: "Designer";
+    }
+    27%{
+        width: fit-content;
+        content: "Designer";
+    }
+    28%{
+        width: fit-content;
+        content: "Designer";
+    }
+    29%{
+        width: fit-content;
+        content: "Designer";
+    }
+    30%{
+        width: fit-content;
+        content: "Designer";
+    }
+    31%{
+        width: fit-content;
+        content: "Designer";
+    }
+    32%{
+        width: fit-content;
+        content: "Designer";
+    }
+    33%{
+        width: fit-content;
+        content: "Designe";
+    }
+    34%{
+        width: fit-content;
+        content: "Design";
+    }
+    35%{
+        width: fit-content;
+        content: "Desig";
+    }
+    36%{
+        width: fit-content;
+        content: "Desi";
+    }
+    37%{
+        width: fit-content;
+        content: "Des";
+    }
+    38%{
+        width: fit-content;
+        content: "De";
+    }
+    39%{
+        width: fit-content;
+        content: "D";
+    }
+    40%{
+        width: fit-content;
+        content: "";
+    }
+    41%{
+        width: fit-content;
+        content: "D";
+    }
+    42%{
+        width: fit-content;
+        content: "De";
+    }
+    43%{
+        width: fit-content;
+        content: "Dev";
+    }
+    44%{
+        width: fit-content;
+        content: "Devel";
+    }
+    45%{
+        width: fit-content;
+        content: "Develo";
+    }
+    46%{
+        width: fit-content;
+        content: "Develop";
+    }
+    47%{
+        width: fit-content;
+        content: "Develope";
+    }
+    48%{
+        width: fit-content;
+        content: "Developer";
+    }
+    49%{
+        width: fit-content;
+        content: "Developer";
+    }
+    50%{
+        width: fit-content;
+        content: "Developer";
+    }
+    51%{
+        width: fit-content;
+        content: "Developer";
+    }
+    52%{
+        width: fit-content;
+        content: "Developer";
+    }
+    53%{
+        width: fit-content;
+        content: "Developer";
+    }
+    54%{
+        width: fit-content;
+        content: "Developer";
+    }
+    55%{
+        width: fit-content;
+        content: "Developer";
+    }
+    56%{
+        width: fit-content;
+        content: "Developer";
+    }
+    57%{
+        width: fit-content;
+        content: "Developer";
+    }
+    58%{
+        width: fit-content;
+        content: "Developer";
+    }
+    58%{
+        width: fit-content;
+        content: "Develope";
+    }
+    58%{
+        width: fit-content;
+        content: "Develop";
+    }
+    58%{
+        width: fit-content;
+        content: "Develo";
+    }
+    59%{
+        width: fit-content;
+        content: "Devel";
+    }
+    60%{
+        width: fit-content;
+        content: "Deve";
+    }
+    61%{
+        width: fit-content;
+        content: "Dev";
+    }
+    62%{
+        width: fit-content;
+        content: "De";
+    }
+    63%{
+        width: fit-content;
+        content: "D";
+    }
+
+    70%{
+        width: fit-content;
+        content: "";
+    }
+   
+    71%{
+        width: fit-content;
+        content: "L";
+    }
+    72%{
+        width: fit-content;
+        content: "La";
+    }
+    73%{
+        width: fit-content;
+        content: "Lar";
+    }
+    73%{
+        width: fit-content;
+        content: "Larr";
+    }
+    73%{
+        width: fit-content;
+        content: "Larry";
+    }
+    73%{
+        width: fit-content;
+        content: "Larry ";
+    }
+    80%{
+        width: fit-content;
+        content: "Larry D";
+    }
+    81%{
+        width: fit-content;
+        content: "Larry Da";
+    }
+    82%{
+        width: fit-content;
+        content: "Larry Dan";
+    }
+    83%{
+        width: fit-content;
+        content: "Larry Dani";
+    }
+    84%{
+        width: fit-content;
+        content: "Larry Danie";
+    }
+    85%{
+        width: fit-content;
+        content: "Larry Daniel";
+    }
+    86%{
+        width: fit-content;
+        content: "Larry Daniels";
+    }
+    90%{
+        width: fit-content;
+        content: "Larry Daniels";
+    }
+    91%{
+        width: fit-content;
+        content: "Larry Daniel";
+    }
+    92%{
+        width: fit-content;
+        content: "Larry Danie";
+    }
+    93%{
+        width: fit-content;
+        content: "Larry Dani";
+    }
+    94%{
+        width: fit-content;
+        content: "Larry Dan";
+    }
+    95%{
+        width: fit-content;
+        content: "Larry Da";
+    }
+    96%{
+        width: fit-content;
+        content: "Larry D";
+    }
+    97%{
+        width: fit-content;
+        content: "Larry";
+    }
+    98%{
+        width: fit-content;
+        content: "Larr";
+    }
+    99%{
+        width: fit-content;
+        content: "Lar";
+    }
+    100%{
+        width: fit-content;
+        content: "";
+    }
+
+}
